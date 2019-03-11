@@ -1,5 +1,12 @@
 package idwall.desafio;
 
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.charset.Charset;
+
+import org.apache.commons.io.FileUtils;
+
 import idwall.desafio.string.IdwallFormatter;
 import idwall.desafio.string.StringFormatter;
 
@@ -42,10 +49,27 @@ public class Main {
 
         // Run IdwallFormatter
         final StringFormatter sf = new IdwallFormatter();
+        
+        sf.setLimit(42);
+        sf.setJustify(false);
+        
         String outputText = sf.format(text);
 
         // Print output text
-        System.out.println("Output: ");
+        System.out.println("\nOutput: ");
         System.out.println(outputText);
+
+        System.out.println("File output expected");
+        File conteudo = new File("docs/output_parte1.txt");
+        
+        String conteudoObtido = "";
+		try {
+			conteudoObtido = FileUtils.readFileToString(conteudo);
+			FileUtils.writeStringToFile(new File("docs/generated_file.txt"), outputText);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+        
+        System.out.println(outputText.equals(conteudoObtido));
     }
 }
