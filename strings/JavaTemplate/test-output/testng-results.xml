@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="59" started-at="2019-03-12T15:32:42Z" finished-at="2019-03-12T15:32:42Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="59" started-at="2019-03-12T15:32:42Z" finished-at="2019-03-12T15:32:42Z">
+      <class name="idwall.desafio.formatter.FormatterTests">
+        <test-method status="PASS" signature="given_one_text_and_limit_42_when_formatter_format_returns_expected_output_formatted()[pri:0, instance:idwall.desafio.formatter.FormatterTests@5034c75a]" name="given_one_text_and_limit_42_when_formatter_format_returns_expected_output_formatted" duration-ms="29" started-at="2019-03-12T15:32:42Z" finished-at="2019-03-12T15:32:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- given_one_text_and_limit_42_when_formatter_format_returns_expected_output_formatted -->
+        <test-method status="PASS" signature="given_one_text_and_limit_42_when_formatter_format_returns_file_with_default_text()[pri:0, instance:idwall.desafio.formatter.FormatterTests@5034c75a]" name="given_one_text_and_limit_42_when_formatter_format_returns_file_with_default_text" duration-ms="3" started-at="2019-03-12T15:32:42Z" finished-at="2019-03-12T15:32:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- given_one_text_and_limit_42_when_formatter_format_returns_file_with_default_text -->
+      </class> <!-- idwall.desafio.formatter.FormatterTests -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

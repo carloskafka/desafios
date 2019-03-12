@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="idwall.desafio.formatter.FormatterTests">
+        <methods>
+          <include name="given_one_text_and_limit_42_when_formatter_format_returns_file_with_default_text"/>
+        </methods>
+      </class> <!-- idwall.desafio.formatter.FormatterTests -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
