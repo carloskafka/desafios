@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import idwall.desafio.string.IdwallFormatter;
 import idwall.desafio.utilities.FileManagerUtils;
 
-public class FormatterTests {
+public class FormatterTest {
 
 	private static final String EXPECTED_OUTPUT_FILE_PATH = "docs/output_parte1.txt";
 	private static final String GENERATED_FILE_PATH = "docs/generated_file_parte_1.txt";
