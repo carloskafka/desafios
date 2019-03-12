@@ -17,10 +17,13 @@ public class FormatContentCommandResultDTOTest {
 		
 		formatContentCommandResultDTO.setUpdatedTextDto(updatedTextDto);
 		
+		Assert.assertFalse(formatContentCommandResultDTO.toString().isEmpty());
 		Assert.assertTrue(formatContentCommandResultDTO.sucessful());
 		Assert.assertNotNull(formatContentCommandResultDTO.getUpdatedTextDto());
 		Assert.assertEquals(formatContentCommandResultDTO.getErrors().size(), 0);
 		Assert.assertEquals(formatContentCommandResultDTO.getMessages().size(), 0);
+		Assert.assertTrue(formatContentCommandResultDTO.getMessageDescriptions().isEmpty());
+		Assert.assertTrue(formatContentCommandResultDTO.getErrorDescriptions().isEmpty());
 	}
 	
 	@Test

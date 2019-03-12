@@ -9,10 +9,11 @@ public class FileManagerUtils {
 	private static final String CHARSET_ENCODING = "UTF-8";
 
 	public static String fetchContent(String path) {
-		String content = "";
+		String content = null;
 		try {
 			content = FileUtils.readFileToString(new File(path));
 		} catch (IOException e) {
+			content = null;
 			e.printStackTrace();
 		}
 		return content;
