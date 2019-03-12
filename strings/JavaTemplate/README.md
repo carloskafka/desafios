@@ -5,6 +5,12 @@
 
 **All parameters are optional, if there isn't any, all parameters are set to default.**
 
-Run tests
+# Run tests
 
 `mvn test`
+
+# Run code coverage
+
+`mvn prepare-package`
+
+Path: target\site\jacoco\index.html
