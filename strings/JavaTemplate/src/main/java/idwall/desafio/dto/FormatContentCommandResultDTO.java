@@ -27,10 +27,6 @@ public class FormatContentCommandResultDTO {
 		return sucessful;
 	}
 
-	public void setSucessful(boolean sucessful) {
-		this.sucessful = sucessful;
-	}
-
 	public void addMessage(String message) {
 		messages.add(message);
 	}
@@ -61,6 +57,10 @@ public class FormatContentCommandResultDTO {
 		return descriptions;
 	}
 
+	public void setErrors(List<String> errors) {
+		this.errors = errors;
+	}
+	
 	public List<String> getErrors() {
 		return errors;
 	}
@@ -68,4 +68,11 @@ public class FormatContentCommandResultDTO {
 	public List<String> getMessages() {
 		return messages;
 	}
+
+	@Override
+	public String toString() {
+		return "FormatContentCommandResultDTO [errors=" + errors + ", messages=" + messages + ", sucessful=" + sucessful
+				+ ", updatedTextDto=" + updatedTextDto + "]";
+	}
+
 }

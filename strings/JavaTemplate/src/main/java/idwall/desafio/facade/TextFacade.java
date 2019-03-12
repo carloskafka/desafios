@@ -30,25 +30,21 @@ public class TextFacade {
 				text.formatLines();
 
 				if (fileRepository.saveFile(text.getUpdatedContent())) {
-					// Print input data
 					formatContentCommandResult.addMessage("Inputs: ");
 					formatContentCommandResult.addMessage("Text: " + text.getContent());
 					formatContentCommandResult.addMessage("Limit: " + text.getMaxLength());
 					formatContentCommandResult.addMessage("Should text.getJustify(): " + text.getJustify());
 					formatContentCommandResult.addMessage("=========================");
 
-					// Print output text
 					formatContentCommandResult.addMessage("\nOutput: ");
 					formatContentCommandResult.addMessage(text.getUpdatedContent());
 					formatContentCommandResult.addMessage("=========================");
 					
 					formatContentCommandResult.setUpdatedTextDto(new TextFactory().convertToDTO(text));
-				} else {
-					formatContentCommandResult.addError(text.getErrorDescriptions());
-				}
+				} 
 			}
 		} else {
-			formatContentCommandResult.addError(text.getErrorDescriptions());
+			formatContentCommandResult.setErrors(text.getErrors());
 		}
 
 		return formatContentCommandResult;

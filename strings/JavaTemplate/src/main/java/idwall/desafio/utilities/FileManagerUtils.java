@@ -18,16 +18,6 @@ public class FileManagerUtils {
 		return content;
 	}
 
-	public static String fetchContent(File file) {
-		String content = "";
-		try {
-			content = FileUtils.readFileToString(file);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return content;
-	}
-
 	public static boolean writeContentToFile(File file, String data) {
 		boolean successful = true;
 

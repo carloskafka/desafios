@@ -10,13 +10,13 @@ import idwall.desafio.utilities.FileManagerUtils;
 public class TextTest {
 
 	@Test
-	public void given_one_generated_file_and_output_file_when_verify_equality_between_both_return_true() {
+	public void given_one_generated_file_and_output_file_when_verify_equality_between_both_then_return_true() {
 		Assert.assertEquals(FileManagerUtils.fetchContent("docs/generated_file.txt"),
 				FileManagerUtils.fetchContent("docs/output_parte1.txt"));
 	}
 	
 	@Test
-	public void given_one_text_and_limit_42_when_formatter_format_returns_expected_output_formatted() {
+	public void given_one_text_and_limit_42_when_formatter_format_then_returns_expected_output_formatted() {
 		String content = "In the beginning God created the heavens and the earth. Now the earth was formless and empty, darkness was over the surface of the deep, and the Spirit of God was hovering over the waters.\n"
 				+ "\n"
 				+ "And God said, \"Let there be light,\" and there was light. God saw that the light was good, and he separated the light from the darkness. God called the light \"day,\" and the darkness he called \"night.\" And there was evening, and there was morning - the first day.";
@@ -42,6 +42,7 @@ public class TextTest {
 				
 		text.formatLines();
 
+		Assert.assertFalse(text.toString().isEmpty());
 		Assert.assertEquals(text.getContent(), content);
 		Assert.assertEquals(text.getUpdatedContent(), updatedContent);
 		Assert.assertEquals(text.getJustify(), justify);
@@ -49,7 +50,7 @@ public class TextTest {
 	}
 
 	@Test
-	public void given_one_invalid_text_when_formatter_validate_input_and_format_lines_returns_expected_errors() {
+	public void given_one_invalid_text_when_formatter_validate_input_and_format_lines_then_returns_expected_errors() {
 		String expectedErrors = "Invalid content. Input a valid one\n"
 				+ "Invalid max length. Input a max length greater than 0.\n";
 

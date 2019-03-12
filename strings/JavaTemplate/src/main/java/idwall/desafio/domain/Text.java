@@ -56,20 +56,8 @@ public class Text {
 		this.maxLength = maxLength;
 	}
 
-	public List<String> getErrors() {
-		return errors;
-	}
-
 	public void addError(String error) {
 		errors.add(error);
-	}
-
-	public void setErrors(List<String> errors) {
-		this.errors = errors;
-	}
-
-	public void setValidado(boolean validado) {
-		this.valid = validado;
 	}
 
 	public void validateInput() {
@@ -87,6 +75,10 @@ public class Text {
 		return valid;
 	}
 
+	public List<String> getErrors() {
+		return errors;
+	}
+	
 	public String getErrorDescriptions() {
 		String errorDescriptions = "";
 

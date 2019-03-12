@@ -50,6 +50,14 @@ public class TextContext {
 		return textDto;
 	}
 	
+	public static TextDTO createValidTextWithJustifyTrueDTO() {
+		TextDTO textDto = createValidTextDTO();
+		
+		textDto.setJustify(true);
+		
+		return textDto;
+	}
+	
 	public static Text createInvalidText() {
 		String content = null;
 		String updatedContent = null;

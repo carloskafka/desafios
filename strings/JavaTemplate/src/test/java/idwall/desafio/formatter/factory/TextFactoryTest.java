@@ -11,7 +11,7 @@ import idwall.desafio.formatter.TextContext;
 public class TextFactoryTest {
 
 	@Test
-	public void given_one_new_text_when_factory_convert_to_dto_returns_textdto() {
+	public void given_one_new_text_when_factory_convert_to_dto_then_returns_textdto() {
 		Text text = TextContext.createValidText();
 
 		TextDTO textDto = new TextFactory().convertToDTO(text);
@@ -23,7 +23,7 @@ public class TextFactoryTest {
 	}
 	
 	@Test
-	public void given_one_new_textdto_when_factory_convert_to_domain_returns_text() {
+	public void given_one_new_textdto_when_factory_convert_to_domain_then_returns_text() {
 		TextDTO textDto = TextContext.createValidTextDTO();
 		
 		Text text = new TextFactory().convertToDomain(textDto);
